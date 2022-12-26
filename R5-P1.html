@@ -1,0 +1,57 @@
+<head>
+	<title>js topic 5 p1</title>
+</head>
+<script>
+	document.write("<h3>Passing string is Palindrome or not</h3>")
+	function fun(string){
+		var len = string.length;
+		for (var i = 0;i < len/2; i++){
+			if (string[i] != string[len - 1 - i]){
+				var msg = "It is not a Palindrome";
+			}
+			else{
+				var msg = "It is a Palindrome";
+			}
+		}
+		document.write(string+" : "+msg);
+	}
+	var str = prompt("Enter The String value for Palindrome");
+	fun(str)
+
+
+	//Recursive method to factorial 
+	document.write("<h3>Recursive method to factorial</h3>")
+	function factorial(num){
+		if(num === 0){
+			return 1;
+		}
+		return num * factorial(num-1);
+	}
+	var num = parseInt(prompt("Enter The Number to find factorial"));
+	document.write("factorial of "+num+" is "+factorial(num));
+
+	//remove vowels from string
+	document.write("<h3>remove vowels from string</h3>")
+	const s = prompt("Enter The String for remove vowels");
+	function fu(s){
+	const novowels = s.replace(/[aeiou]/gi,'');
+	return novowels;
+	}
+	document.write(s+"<br>"+fu(s));
+
+	//4)
+	document.write("<h3>Consider two function</h3>")
+	function foo1(){
+		return{
+			bar: "hello"
+		};
+	}
+	function foo2(){
+		return
+		{
+			bar: "hello"
+		};
+	}
+	console.log(foo1());
+	console.log(foo2());
+</script>
